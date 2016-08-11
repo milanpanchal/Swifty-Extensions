@@ -1,5 +1,5 @@
 //
-//  NSDate+Extensions.swift
+//  NSDate+Extension.swift
 //  Swift-Extension
 //
 //  Created by MilanPanchal on 05/06/16.

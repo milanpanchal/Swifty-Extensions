@@ -1,0 +1,6 @@
+framework module Swifty_Extensions {
+  umbrella header "Swifty-Extensions-umbrella.h"
+
+  export *
+  module * { export * }
+}

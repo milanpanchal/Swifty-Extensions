@@ -1,5 +1,5 @@
 //
-//  Dictionary+Extensions.swift
+//  NSTimer+Extension.swift
 //  Swift-Extension
 //
 //  Created by MilanPanchal on 05/06/16.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-public extension Dictionary {
+public extension NSTimer {
     
 }
