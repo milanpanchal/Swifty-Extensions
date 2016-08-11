@@ -30,7 +30,7 @@ Useful swift extensions for different classes like:
 
 
 ## Installation
----
+
 Swifty-Extensions is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -39,14 +39,14 @@ pod "Swifty-Extensions"
 ```
 
 ## Next Step
----
+
 Please feel free to contribute the project as much as you can. Planning to add more methods.
 
 
 
 
 ## Author
----
+
 **Milan Panchal**, follow me on:
 
 1. **Twitter** ([@milan_panchal24](https://twitter.com/milan_panchal24))
@@ -59,5 +59,5 @@ Please feel free to contribute the project as much as you can. Planning to add m
 
 
 ## License
----
+
 Swifty-Extensions is available under the MIT license. See the LICENSE file for more info.
