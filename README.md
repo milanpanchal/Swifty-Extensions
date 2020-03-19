@@ -1,6 +1,6 @@
 # Swifty-Extensions
 
-[![CI Status](http://img.shields.io/travis/Milan Panchal/Swifty-Extensions.svg?style=flat)](https://travis-ci.org/Milan Panchal/Swifty-Extensions)
+[![CI Status](http://img.shields.io/travis/milanpanchal/Swifty-Extensions.svg?style=flat)](https://travis-ci.org/milanpanchal/Swifty-Extensions)
 [![Version](https://img.shields.io/cocoapods/v/Swifty-Extensions.svg?style=flat)](http://cocoapods.org/pods/Swifty-Extensions)
 [![License](https://img.shields.io/cocoapods/l/Swifty-Extensions.svg?style=flat)](http://cocoapods.org/pods/Swifty-Extensions)
 [![Platform](https://img.shields.io/cocoapods/p/Swifty-Extensions.svg?style=flat)](http://cocoapods.org/pods/Swifty-Extensions)
@@ -53,7 +53,9 @@ Please feel free to contribute the project as much as you can. Planning to add m
 
 2. **Github** ([/milanpanchal](https://github.com/milanpanchal/))
 
-3. **Blog** ([http://www.jeenalinfotech.com/](http://www.jeenalinfotech.com/))
+3. **Medium** ([https://medium.com/@milanpanchal24](https://medium.com/@milanpanchal24))
+
+4. **LinkedIn** ([/in/milanpanchal/](https://www.linkedin.com/in/milanpanchal/))
 
 
 
