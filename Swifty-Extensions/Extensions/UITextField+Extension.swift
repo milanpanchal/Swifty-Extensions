@@ -10,6 +10,21 @@ import UIKit
 
 extension UITextField {
 
+    func underlined() {
+        let width = CGFloat(1.0)
+
+        let border = CALayer()
+        border.borderColor = UIColor.lightGray.cgColor
+        border.frame = CGRect(x: 0,
+                              y: self.frame.size.height - width,
+                              width: self.frame.size.width,
+                              height: self.frame.size.height)
+        
+        border.borderWidth = width
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
+    }
+    
     func setLeftView(img: UIImage, width: CGFloat = 50, tintColor: UIColor = .black) {
         let imgView = UIImageView(image: img)
         imgView.contentMode = .center

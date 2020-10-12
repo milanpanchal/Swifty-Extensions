@@ -35,5 +35,10 @@ public extension Double {
         let divisor = pow(10.0, Double(places))
         return (self * divisor).rounded() / divisor
     }
+    
+    var isPerfectSquare: Bool {
+        return self.squareRoot().rounded() == self.squareRoot()
+    }
+    
 }
 
