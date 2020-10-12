@@ -1,48 +1,33 @@
 # Swifty-Extensions
 
-[![CI Status](http://img.shields.io/travis/milanpanchal/Swifty-Extensions.svg?style=flat)](https://travis-ci.org/milanpanchal/Swifty-Extensions)
-[![Version](https://img.shields.io/cocoapods/v/Swifty-Extensions.svg?style=flat)](http://cocoapods.org/pods/Swifty-Extensions)
+<a href="https://www.linkedin.com/in/milanpanchal/">
+    <img src="https://img.shields.io/badge/Support-Recommend%2FEndorse%20me%20on%20Linkedin-blue?style=for-the-badge&logo=linkedin" alt="Support me on LinkedIn" /></a>
+
+<!--[![CI Status](http://img.shields.io/travis/milanpanchal/Swifty-Extensions.svg?style=flat)](https://travis-ci.org/milanpanchal/Swifty-Extensions)
+[![Version](https://img.shields.io/cocoapods/v/Swifty-Extensions.svg?style=flat)](http://cocoapods.org/pods/Swifty-Extensions) -->
 [![License](https://img.shields.io/cocoapods/l/Swifty-Extensions.svg?style=flat)](http://cocoapods.org/pods/Swifty-Extensions)
 [![Platform](https://img.shields.io/cocoapods/p/Swifty-Extensions.svg?style=flat)](http://cocoapods.org/pods/Swifty-Extensions)
 
 
-Useful swift extensions for different classes like: 
+Swifty-Extensions is a collection of native Swift extensions that you needs in your most of the Projects.
 
-
-* Bool
-* Double
-* String
-* Dictionary
-* Array 
-* NSDate
-* NSTimer
-* NSURL
-* NSUserDefaults
-* NSObject
-* NSLayoutConstraint
-* UIColor
-* UIAlertController
-* UIApplication
-* UIImage
-* UIImageView
-* UITextView
-* UIViewController
-
+## Requirements
+* Swift 5.0+
+* iOS 10.0+
 
 ## Installation
-
+<!--
 Swifty-Extensions is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "Swifty-Extensions"
 ```
+-->
 
-## Next Step
+Drag and drop [Extensions](https://github.com/milanpanchal/Swifty-Extensions/tree/master/Swifty-Extensions/Extensions) folder inside your project and use it.
 
-Please feel free to contribute the project as much as you can. Planning to add more methods.
-
-
+Or directly you can copy and paste inside your class. 🚀
 
 
 ## Author
@@ -50,16 +35,15 @@ Please feel free to contribute the project as much as you can. Planning to add m
 **Milan Panchal**, follow me on:
 
 1. **Twitter** ([@milan_panchal24](https://twitter.com/milan_panchal24))
-
 2. **Github** ([/milanpanchal](https://github.com/milanpanchal/))
-
 3. **Medium** ([https://medium.com/@milanpanchal24](https://medium.com/@milanpanchal24))
-
 4. **LinkedIn** ([/in/milanpanchal/](https://www.linkedin.com/in/milanpanchal/))
+2. **LeedCode** ([/milanpanchal](https://leetcode.com/milanpanchal/))
 
 
+License
+----
 
+MIT
 
-## License
-
-Swifty-Extensions is available under the MIT license. See the LICENSE file for more info.
+**Free Software, Hell Yeah!**
