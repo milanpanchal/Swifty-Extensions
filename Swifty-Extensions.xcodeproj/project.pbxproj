@@ -223,22 +223,39 @@
 		E03EC11225345C780097A555 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E03EC1672535743D0097A555 /* Foundation */,
+				E03EC168253574860097A555 /* UIKit */,
+				E03EC169253578400097A555 /* Dispatch */,
+				E03EC16A253578880097A555 /* MapKit */,
+				E03EC16B253578BC0097A555 /* Core Data */,
+				E03EC11725345C780097A555 /* NSObject+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E03EC1672535743D0097A555 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
 				E03EC12425345C780097A555 /* Array+Extension.swift */,
 				E03EC11925345C780097A555 /* Bool+Extension.swift */,
 				E03EC137253469260097A555 /* Bundle+Extension.swift */,
 				E03EC14F2534757F0097A555 /* Data+Extension.swift */,
 				E03EC15D2534D1490097A555 /* Date+Extension.swift */,
 				E03EC12025345C780097A555 /* Dictionary+Extension.swift */,
-				E03EC1572534764E0097A555 /* DispatchQueue+Extension.swift */,
 				E03EC11A25345C780097A555 /* Double+Extension.swift */,
 				E03EC1612534DC1D0097A555 /* Int+Extension.swift */,
 				E03EC13925346D430097A555 /* Locale+Extension.swift */,
-				E03EC1652534DD140097A555 /* MKMapItem+Extension.swift */,
-				E03EC12125345C780097A555 /* NSLayoutContraint+Extention.swift */,
-				E03EC13B25346D600097A555 /* NSManagedObject+Extension.swift */,
 				E03EC13D25346D880097A555 /* NSNotification+Extension.swift */,
-				E03EC11725345C780097A555 /* NSObject+Extension.swift */,
 				E03EC11D25345C780097A555 /* String+Extension.swift */,
+				E03EC1492534749D0097A555 /* UserDefaults+Extension.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		E03EC168253574860097A555 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E03EC12125345C780097A555 /* NSLayoutContraint+Extention.swift */,
 				E03EC151253475C60097A555 /* UIAlertController+Extension.swift */,
 				E03EC11325345C780097A555 /* UIApplication+Extension.swift */,
 				E03EC14B253474F80097A555 /* UIButton+Extension.swift */,
@@ -258,9 +275,32 @@
 				E03EC145253473C10097A555 /* UIView+Extension.swift */,
 				E03EC11C25345C780097A555 /* UIViewController+Extension.swift */,
 				E03EC15B253476B10097A555 /* UIWindow+Extension.swift */,
-				E03EC1492534749D0097A555 /* UserDefaults+Extension.swift */,
 			);
-			path = Extensions;
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		E03EC169253578400097A555 /* Dispatch */ = {
+			isa = PBXGroup;
+			children = (
+				E03EC1572534764E0097A555 /* DispatchQueue+Extension.swift */,
+			);
+			path = Dispatch;
+			sourceTree = "<group>";
+		};
+		E03EC16A253578880097A555 /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				E03EC1652534DD140097A555 /* MKMapItem+Extension.swift */,
+			);
+			path = MapKit;
+			sourceTree = "<group>";
+		};
+		E03EC16B253578BC0097A555 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				E03EC13B25346D600097A555 /* NSManagedObject+Extension.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
