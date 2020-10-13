@@ -6,27 +6,20 @@
     <img src="https://img.shields.io/badge/Support-Recommend%2FEndorse%20me%20on%20Linkedin-blue?style=for-the-badge&logo=linkedin" alt="Support me on LinkedIn" /></a>
 
 <!--[![CI Status](http://img.shields.io/travis/milanpanchal/Swifty-Extensions.svg?style=flat)](https://travis-ci.org/milanpanchal/Swifty-Extensions)
-[![Version](https://img.shields.io/cocoapods/v/Swifty-Extensions.svg?style=flat)](http://cocoapods.org/pods/Swifty-Extensions) -->
+[![Version](https://img.shields.io/cocoapods/v/Swifty-Extensions.svg?style=flat)](http://cocoapods.org/pods/Swifty-Extensions) 
 
-[![Platform](https://img.shields.io/cocoapods/p/Swifty-Extensions.svg?style=flat)](http://cocoapods.org/pods/Swifty-Extensions)
+[![Platform](https://img.shields.io/cocoapods/p/Swifty-Extensions.svg?style=flat)](http://cocoapods.org/pods/Swifty-Extensions) -->
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/milanpanchal/Swifty-Extensions)
-
 ![GitHub contributors](https://img.shields.io/github/contributors/milanpanchal/Swifty-Extensions)
-
 ![GitHub stars](https://img.shields.io/github/stars/milanpanchal/Swifty-Extensions?style=social)
-
 ![GitHub forks](https://img.shields.io/github/forks/milanpanchal/Swifty-Extensions?style=social)
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/milan_panchal24?style=social)](http://twitter.com/milan_panchal24)
-
 ![Platform](https://img.shields.io/badge/platform-ios-blue.svg?style=flat)
-
 ![Swift version](https://img.shields.io/badge/Swift-5-orange.svg?style=flat)
-
 ![License](https://img.shields.io/github/license/milanpanchal/Swifty-Extensions)
 
-
+[![Twitter Follow](https://img.shields.io/twitter/follow/milan_panchal24?style=social)](http://twitter.com/milan_panchal24)
 
 Swifty-Extensions is a collection of native Swift extensions that you needs in your most of the Projects.
 
