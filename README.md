@@ -84,16 +84,19 @@ Or directly you can copy and paste inside your class. 🚀
 
 ###### [CoreData](https://github.com/milanpanchal/Swifty-Extensions/blob/master/Swifty-Extensions/Extensions/CoreData)
 
-* NSManagedObject Extension
+- NSManagedObject Extension
 
 ###### [Dispatch](https://github.com/milanpanchal/Swifty-Extensions/blob/master/Swifty-Extensions/Extensions/Dispatch)
 
-* DispatchQueue Extension
+- DispatchQueue Extension
 
 ###### [MapKit](https://github.com/milanpanchal/Swifty-Extensions/blob/master/Swifty-Extensions/Extensions/MapKit)
 
-* MKMapItem Extension
+- MKMapItem Extension
 
+###### Other
+- CALayer Extension
+- NSObject Extension
 
 ## Author
 
