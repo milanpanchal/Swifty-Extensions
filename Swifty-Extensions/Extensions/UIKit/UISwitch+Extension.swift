@@ -8,8 +8,9 @@
 
 import UIKit
 
-extension UISwitch {
+public extension UISwitch {
 
+    /// Set width and height of the UISwitch
     func set(width: CGFloat, height: CGFloat) {
 
         let standardHeight: CGFloat = 31
@@ -19,6 +20,11 @@ extension UISwitch {
         let widthRatio = width / standardWidth
 
         transform = CGAffineTransform(scaleX: widthRatio, y: heightRatio)
+    }
+    
+    /// Toggles Switch
+    func toggle() {
+        self.setOn(!self.isOn, animated: true)
     }
 }
 

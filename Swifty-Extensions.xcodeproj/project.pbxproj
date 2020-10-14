@@ -31,7 +31,6 @@
 		E03EC13625345C780097A555 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03EC12425345C780097A555 /* Array+Extension.swift */; };
 		E03EC138253469260097A555 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03EC137253469260097A555 /* Bundle+Extension.swift */; };
 		E03EC13A25346D430097A555 /* Locale+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03EC13925346D430097A555 /* Locale+Extension.swift */; };
-		E03EC13C25346D600097A555 /* NSManagedObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03EC13B25346D600097A555 /* NSManagedObject+Extension.swift */; };
 		E03EC13E25346D880097A555 /* NSNotification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03EC13D25346D880097A555 /* NSNotification+Extension.swift */; };
 		E03EC140253472410097A555 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03EC13F253472410097A555 /* UICollectionView+Extension.swift */; };
 		E03EC142253473320097A555 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03EC141253473320097A555 /* UIDevice+Extension.swift */; };
@@ -52,6 +51,8 @@
 		E03EC1622534DC1D0097A555 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03EC1612534DC1D0097A555 /* Int+Extension.swift */; };
 		E03EC1642534DCAA0097A555 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03EC1632534DCAA0097A555 /* UINavigationController+Extension.swift */; };
 		E03EC1662534DD140097A555 /* MKMapItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03EC1652534DD140097A555 /* MKMapItem+Extension.swift */; };
+		E03EC16E253582030097A555 /* NSManagedObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03EC16D253582030097A555 /* NSManagedObject+Extension.swift */; };
+		E088C0D92536EF620060A777 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E088C0D82536EF620060A777 /* CALayer+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +103,6 @@
 		E03EC12425345C780097A555 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		E03EC137253469260097A555 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		E03EC13925346D430097A555 /* Locale+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extension.swift"; sourceTree = "<group>"; };
-		E03EC13B25346D600097A555 /* NSManagedObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extension.swift"; sourceTree = "<group>"; };
 		E03EC13D25346D880097A555 /* NSNotification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Extension.swift"; sourceTree = "<group>"; };
 		E03EC13F253472410097A555 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		E03EC141253473320097A555 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
@@ -123,6 +123,8 @@
 		E03EC1612534DC1D0097A555 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		E03EC1632534DCAA0097A555 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		E03EC1652534DD140097A555 /* MKMapItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapItem+Extension.swift"; sourceTree = "<group>"; };
+		E03EC16D253582030097A555 /* NSManagedObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extension.swift"; sourceTree = "<group>"; };
+		E088C0D82536EF620060A777 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,8 +229,9 @@
 				E03EC168253574860097A555 /* UIKit */,
 				E03EC169253578400097A555 /* Dispatch */,
 				E03EC16A253578880097A555 /* MapKit */,
-				E03EC16B253578BC0097A555 /* Core Data */,
+				E03EC16C253582030097A555 /* CoreData */,
 				E03EC11725345C780097A555 /* NSObject+Extension.swift */,
+				E088C0D82536EF620060A777 /* CALayer+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -295,12 +298,12 @@
 			path = MapKit;
 			sourceTree = "<group>";
 		};
-		E03EC16B253578BC0097A555 /* Core Data */ = {
+		E03EC16C253582030097A555 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				E03EC13B25346D600097A555 /* NSManagedObject+Extension.swift */,
+				E03EC16D253582030097A555 /* NSManagedObject+Extension.swift */,
 			);
-			path = "Core Data";
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,7 +448,6 @@
 				E03EC0E225345B700097A555 /* ViewController.swift in Sources */,
 				E03EC12E25345C780097A555 /* UIViewController+Extension.swift in Sources */,
 				E03EC152253475C60097A555 /* UIAlertController+Extension.swift in Sources */,
-				E03EC13C25346D600097A555 /* NSManagedObject+Extension.swift in Sources */,
 				E03EC13225345C780097A555 /* Dictionary+Extension.swift in Sources */,
 				E03EC1562534763B0097A555 /* UILabel+Extension.swift in Sources */,
 				E03EC154253476240097A555 /* UISwitch+Extension.swift in Sources */,
@@ -457,6 +459,7 @@
 				E03EC15E2534D14A0097A555 /* Date+Extension.swift in Sources */,
 				E03EC1622534DC1D0097A555 /* Int+Extension.swift in Sources */,
 				E03EC14C253474F80097A555 /* UIButton+Extension.swift in Sources */,
+				E03EC16E253582030097A555 /* NSManagedObject+Extension.swift in Sources */,
 				E03EC12525345C780097A555 /* UIApplication+Extension.swift in Sources */,
 				E03EC13A25346D430097A555 /* Locale+Extension.swift in Sources */,
 				E03EC15A253476890097A555 /* UIControl+Extension.swift in Sources */,
@@ -469,6 +472,7 @@
 				E03EC13325345C780097A555 /* NSLayoutContraint+Extention.swift in Sources */,
 				E03EC15C253476B10097A555 /* UIWindow+Extension.swift in Sources */,
 				E03EC12B25345C780097A555 /* Bool+Extension.swift in Sources */,
+				E088C0D92536EF620060A777 /* CALayer+Extension.swift in Sources */,
 				E03EC12F25345C780097A555 /* String+Extension.swift in Sources */,
 				E03EC13125345C780097A555 /* UITextView+Extension.swift in Sources */,
 				E03EC12825345C780097A555 /* UIColor+Extension.swift in Sources */,
