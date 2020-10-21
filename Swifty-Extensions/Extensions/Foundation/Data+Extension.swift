@@ -19,7 +19,7 @@ extension Data {
     }
     
     var dictValue: [String: Any]? {
-        return stringValue.convertToDictionary()
+        return stringValue.asDict
     }
 
     var prettyPrintedJSONString: NSString? { // NSString gives us a nice sanitized debugDescription

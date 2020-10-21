@@ -98,6 +98,17 @@ Or directly you can copy and paste inside your class. 🚀
 - CALayer Extension
 - NSObject Extension
 
+
+
+## Communication
+<!--
+- If you **need help**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/tag-name). (Tag 'tag-name')
+- If you'd like to **ask a general question**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/tag-name).-->
+- If you **found a bug**, open an issue.
+- If you **have a feature request**, open an issue.
+- If you **want to contribute**, submit a pull request.
+
+
 ## Author
 
 **Milan Panchal**, follow me on:

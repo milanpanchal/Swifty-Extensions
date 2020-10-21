@@ -6,7 +6,8 @@
 //  Copyright © 2016 JeenalInfotech. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import CoreLocation
 
 public extension String {
     
@@ -22,6 +23,10 @@ public extension String {
     /// Trims white space and new line characters, returns a new string
     var trimmed: String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
+    mutating func trim() {
+        self = self.trimmed
     }
     
     /// split string using a spearator string, returns an array of string
@@ -45,7 +50,6 @@ public extension String {
         return regex?.numberOfMatches(in: self, options: NSRegularExpression.MatchingOptions(), range: NSMakeRange(0, self.count)) ?? 0
     }
     
-    
     /// Checks if String contains Email
     var isEmail: Bool {
         let dataDetector = try? NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
@@ -64,6 +68,23 @@ public extension String {
         let pwdRegEx = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{6,}$"
         let pwdTest = NSPredicate(format: "SELF MATCHES %@", pwdRegEx)
         return pwdTest.evaluate(with: self)
+    }
+    
+    /// Usage
+    /// let digitsOnlyYes = "1234567890".containsOnlyDigits
+    /// let digitsOnlyNo = "12345+789".containsOnlyDigits
+
+    var containsOnlyDigits: Bool {
+        let notDigits = NSCharacterSet.decimalDigits.inverted
+        return rangeOfCharacter(from: notDigits, options: String.CompareOptions.literal, range: nil) == nil
+    }
+    
+    /// Usage
+    // let alphanumericYes = "asd3kJh43saf".isAlphanumeric
+    // let alphanumericNo = "Kkncs+_s3mM.".isAlphanumeric
+
+    var isAlphanumeric: Bool {
+        !isEmpty && range(of: "[^a-zA-Z0-9]", options: .regularExpression) == nil
     }
     
     func grouping(every groupSize: String.IndexDistance, with separator: Character) -> String {
@@ -136,13 +157,25 @@ public extension String {
         return String((0..<length).map{ _ in letters.randomElement()! })
     }
     
-    func convertToDictionary() -> [String: Any]? {
-        if let data = data(using: .utf8) {
-            return try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-        }
-        return nil
+    /// Usage:
+    /// let json = "{\"hello\": \"world\"}"
+    /// let dictFromJson = json.asDict
+
+    var asDict: [String: Any]? {
+        guard let data = self.data(using: .utf8) else { return nil }
+        return try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
     }
     
+    /// Converts the JSON array into a Swift array
+    /// Usage:
+    /// let json = "[1, 2, 3]"
+    /// let dictFromJson = json.asArray
+
+    var asArray: [Any]? {
+        guard let data = self.data(using: .utf8) else { return nil }
+        return try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [Any]
+    }
+        
     /// var str = "Hello, playground"
     /// let result = str.vowelConsonantCount()
     /// result.vowels // 5
@@ -173,5 +206,40 @@ public extension String {
         
         return numOfVow
     }
+
+    /// Usage:
+    /// let strCoordinates = "41.6168, 41.6367"
+    /// let coordinates = strCoordinates.asCoordinates
+
+    var asCoordinates: CLLocationCoordinate2D? {
+        let components = self.components(separatedBy: ",")
+        if components.count != 2 { return nil }
+        let strLat = components[0].trimmed
+        let strLng = components[1].trimmed
+        if let dLat = Double(strLat),
+            let dLng = Double(strLng) {
+            return CLLocationCoordinate2D(latitude: dLat, longitude: dLng)
+        }
+        return nil
+    }
 }
 
+extension String {
+    
+    /// Usage:
+    /// let text = "Hello, world!"
+    /// let textHeight = text.height(withConstrainedWidth: 100, font: UIFont.systemFont(ofSize: 16))
+    func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font: font], context: nil)
+
+        return ceil(boundingBox.height)
+    }
+
+    func width(withConstrainedHeight height: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font: font], context: nil)
+
+        return ceil(boundingBox.width)
+    }
+}
