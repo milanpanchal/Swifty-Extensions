@@ -29,7 +29,7 @@ extension NSManagedObject {
          return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
      }
      
-    class func countAll() -> Int {
+    class var totalRecords: Int {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         do {
             return try managedObjectContext.count(for: request)
