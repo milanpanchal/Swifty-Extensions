@@ -1,5 +1,5 @@
 //
-//  UINavigationItem.swift
+//  UINavigationItem+Extension.swift
 //  Swifty-Extensions
 //
 //  Created by Milan Panchal on 02/11/20.
