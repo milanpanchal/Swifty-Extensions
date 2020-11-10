@@ -62,8 +62,6 @@ public extension UIColor {
         
     }
     
-    
-    
     class func colorWithHexCode(_ hexValue: UInt) -> UIColor {
         return UIColor(
             red: CGFloat((hexValue & 0xFF0000) >> 16) / 255.0,
@@ -73,6 +71,32 @@ public extension UIColor {
         )
     }
     
+    // Generate color from name string
+    static func colorHash(name: String?) -> UIColor {
+        guard let name = name else {
+            return .lightGray
+        }
+        
+        var nameValue = 0
+        for character in name {
+            let characterString = String(character)
+            let scalars = characterString.unicodeScalars
+            nameValue += Int(scalars[scalars.startIndex].value)
+        }
+        
+        var r = Float((nameValue * 123) % 51) / 51
+        var g = Float((nameValue * 321) % 73) / 73
+        var b = Float((nameValue * 213) % 91) / 91
+        
+        let defaultValue: Float = 0.84
+        r = min(max(r, 0.1), defaultValue)
+        g = min(max(g, 0.1), defaultValue)
+        b = min(max(b, 0.1), defaultValue)
+        
+        return .init(red: CGFloat(r), green: CGFloat(g), blue: CGFloat(b), alpha: 1.0)
+    }
+    
+    /// Extract (R,G,B) from UIColor and return Hex String
     func toHexString() -> String {
         var r: CGFloat = 0
         var g: CGFloat = 0
@@ -83,7 +107,8 @@ public extension UIColor {
         return String(format: "#%06x", rgb)
     }
     
-    func randomColor() -> UIColor {
+    /// Generate random color using drand48()
+    static var random: UIColor {
         
         let red     = CGFloat(drand48())
         let green   = CGFloat(drand48())
