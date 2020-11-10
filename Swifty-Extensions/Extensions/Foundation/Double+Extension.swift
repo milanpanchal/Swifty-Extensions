@@ -10,14 +10,21 @@ import Foundation
 
 public extension Double {
     
-    func celsiusToFahrenheit() -> Double {
-        return self * 9 / 5 + 32
+    // Convert from °F to °C (Double)
+    var toCelsius: Double {
+        return (self - 32) / 1.8
     }
     
-    func fahrenheitToCelsius() -> Double {
-        return (self - 32) * 5 / 9
+    // Convert from °C to °F (Double)
+    var toFahrenheit: Double {
+        return (self * 9.0/5.0) + 32.0
     }
-    
+       
+    // Convert from milliAmpere to Ampere
+    var toAmpere: Double {
+        return self / 1000.0
+    }
+
     /**
      Random double between min and max (inclusive).
      
