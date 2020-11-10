@@ -56,4 +56,12 @@ extension UIView {
         return nil
     }
 
+    /// Add Tap gesture to the view
+    /// By default there will be single tap gesture
+    func addTapGesture(tapCount: Int = 1, target: Any, action: Selector) {
+        let tap = UITapGestureRecognizer(target: target, action: action)
+        tap.numberOfTapsRequired = tapCount
+        addGestureRecognizer(tap)
+        isUserInteractionEnabled = true
+    }
 }
