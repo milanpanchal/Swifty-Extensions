@@ -38,13 +38,23 @@ public extension UIImage {
     }
     
     
-    ///Returns an empty image //TODO: Add to readme
+    /// Returns an empty image //TODO: Add to readme
     class func blankImage() -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 1, height: 1), false, 0.0)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
     }
+    
+    /// Get the new image with alpha
+    func alpha(_ value: CGFloat) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        draw(at: CGPoint.zero, blendMode: .normal, alpha: value)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+
 }
 
 extension UIImage {
