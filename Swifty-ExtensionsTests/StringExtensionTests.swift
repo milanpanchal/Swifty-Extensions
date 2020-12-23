@@ -7,19 +7,12 @@
 //
 
 import XCTest
+@testable import Swifty_Extensions
 
 class StringExtensionTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
     override func tearDown() {
@@ -27,8 +20,30 @@ class StringExtensionTests: XCTestCase {
     }
 
     func testExample() {
-        // Use recording to get started writing UI tests.
+        // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
+    func testPerformanceExample() {
+        // This is an example of a performance test case.
+        self.measure {
+            // Put the code you want to measure the time of here.
+        }
+    }
+
+    func testIni() {
+        XCTAssertEqual("Milan".initialsByPersonNameComponents, "M", "Initials should be M")
+        XCTAssertEqual("Milan Panchal".initialsByPersonNameComponents, "MP", "Initials should be MP")
+        XCTAssertEqual("Milan     Panchal".initialsByPersonNameComponents, "MP", "Initials should be MP")
+        XCTAssertEqual("John Fitzgerald Kennedy".initialsByPersonNameComponents, "JK", "Initials should be JK")
+        XCTAssertEqual("Mr John Jacob Smith III".initialsByPersonNameComponents, "JS", "Initials should be JS")
+    }
+    
+    func testInitial() {
+        XCTAssertEqual("Milan".initials, "M", "Initials should be M")
+        XCTAssertEqual("Milan Panchal".initials, "MP", "Initials should be MP")
+        XCTAssertEqual("Milan     Panchal".initials, "MP", "Initials should be MP")
+        XCTAssertEqual("John Fitzgerald Kennedy".initials, "JK", "Initials should be JK")
+        XCTAssertEqual("Mr John Jacob Smith III".initials, "MI", "Initials should be JS")
+    }
 }

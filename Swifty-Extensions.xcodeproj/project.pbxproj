@@ -52,6 +52,11 @@
 		E03EC1642534DCAA0097A555 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03EC1632534DCAA0097A555 /* UINavigationController+Extension.swift */; };
 		E03EC1662534DD140097A555 /* MKMapItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03EC1652534DD140097A555 /* MKMapItem+Extension.swift */; };
 		E03EC16E253582030097A555 /* NSManagedObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03EC16D253582030097A555 /* NSManagedObject+Extension.swift */; };
+		E0406F06254151520095FCCA /* String+Barcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0406F05254151520095FCCA /* String+Barcode.swift */; };
+		E0406F09254166D50095FCCA /* BarcodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0406F08254166D50095FCCA /* BarcodeGenerator.swift */; };
+		E045BDBA25402DA80094DE85 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E045BDB925402DA80094DE85 /* StringExtensionTests.swift */; };
+		E045BDBC2540314D0094DE85 /* PersonNameComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E045BDBB2540314D0094DE85 /* PersonNameComponents+Extension.swift */; };
+		E0665173255025D300C7B0ED /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0665172255025D300C7B0ED /* UINavigationItem+Extension.swift */; };
 		E088C0D92536EF620060A777 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E088C0D82536EF620060A777 /* CALayer+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +129,11 @@
 		E03EC1632534DCAA0097A555 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		E03EC1652534DD140097A555 /* MKMapItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapItem+Extension.swift"; sourceTree = "<group>"; };
 		E03EC16D253582030097A555 /* NSManagedObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extension.swift"; sourceTree = "<group>"; };
+		E0406F05254151520095FCCA /* String+Barcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Barcode.swift"; sourceTree = "<group>"; };
+		E0406F08254166D50095FCCA /* BarcodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeGenerator.swift; sourceTree = "<group>"; };
+		E045BDB925402DA80094DE85 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
+		E045BDBB2540314D0094DE85 /* PersonNameComponents+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonNameComponents+Extension.swift"; sourceTree = "<group>"; };
+		E0665172255025D300C7B0ED /* UINavigationItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extension.swift"; sourceTree = "<group>"; };
 		E088C0D82536EF620060A777 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +185,7 @@
 		E03EC0DC25345B700097A555 /* Swifty-Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E0406F07254166C30095FCCA /* Utility */,
 				E03EC11225345C780097A555 /* Extensions */,
 				E03EC11025345C580097A555 /* Application */,
 				E03EC11125345C610097A555 /* View Controller */,
@@ -191,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				E03EC0F725345B780097A555 /* Swifty_ExtensionsTests.swift */,
+				E045BDB925402DA80094DE85 /* StringExtensionTests.swift */,
 				E03EC0F925345B780097A555 /* Info.plist */,
 			);
 			path = "Swifty-ExtensionsTests";
@@ -249,7 +261,9 @@
 				E03EC1612534DC1D0097A555 /* Int+Extension.swift */,
 				E03EC13925346D430097A555 /* Locale+Extension.swift */,
 				E03EC13D25346D880097A555 /* NSNotification+Extension.swift */,
+				E045BDBB2540314D0094DE85 /* PersonNameComponents+Extension.swift */,
 				E03EC11D25345C780097A555 /* String+Extension.swift */,
+				E0406F05254151520095FCCA /* String+Barcode.swift */,
 				E03EC1492534749D0097A555 /* UserDefaults+Extension.swift */,
 			);
 			path = Foundation;
@@ -278,6 +292,7 @@
 				E03EC145253473C10097A555 /* UIView+Extension.swift */,
 				E03EC11C25345C780097A555 /* UIViewController+Extension.swift */,
 				E03EC15B253476B10097A555 /* UIWindow+Extension.swift */,
+				E0665172255025D300C7B0ED /* UINavigationItem+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -304,6 +319,14 @@
 				E03EC16D253582030097A555 /* NSManagedObject+Extension.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		E0406F07254166C30095FCCA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				E0406F08254166D50095FCCA /* BarcodeGenerator.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,7 +392,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Jeenal Infotech";
 				TargetAttributes = {
 					E03EC0D925345B700097A555 = {
@@ -440,6 +463,8 @@
 				E03EC140253472410097A555 /* UICollectionView+Extension.swift in Sources */,
 				E03EC12625345C780097A555 /* UIImageView+Extension.swift in Sources */,
 				E03EC13E25346D880097A555 /* NSNotification+Extension.swift in Sources */,
+				E0406F06254151520095FCCA /* String+Barcode.swift in Sources */,
+				E0406F09254166D50095FCCA /* BarcodeGenerator.swift in Sources */,
 				E03EC13625345C780097A555 /* Array+Extension.swift in Sources */,
 				E03EC12925345C780097A555 /* NSObject+Extension.swift in Sources */,
 				E03EC1642534DCAA0097A555 /* UINavigationController+Extension.swift in Sources */,
@@ -465,6 +490,7 @@
 				E03EC15A253476890097A555 /* UIControl+Extension.swift in Sources */,
 				E03EC1502534757F0097A555 /* Data+Extension.swift in Sources */,
 				E03EC138253469260097A555 /* Bundle+Extension.swift in Sources */,
+				E0665173255025D300C7B0ED /* UINavigationItem+Extension.swift in Sources */,
 				E03EC12A25345C780097A555 /* UIImage+Extension.swift in Sources */,
 				E03EC12C25345C780097A555 /* Double+Extension.swift in Sources */,
 				E03EC142253473320097A555 /* UIDevice+Extension.swift in Sources */,
@@ -476,6 +502,7 @@
 				E03EC12F25345C780097A555 /* String+Extension.swift in Sources */,
 				E03EC13125345C780097A555 /* UITextView+Extension.swift in Sources */,
 				E03EC12825345C780097A555 /* UIColor+Extension.swift in Sources */,
+				E045BDBC2540314D0094DE85 /* PersonNameComponents+Extension.swift in Sources */,
 				E03EC14A2534749D0097A555 /* UserDefaults+Extension.swift in Sources */,
 				E03EC1442534736E0097A555 /* UITableView+Extension.swift in Sources */,
 			);
@@ -485,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E045BDBA25402DA80094DE85 /* StringExtensionTests.swift in Sources */,
 				E03EC0F825345B780097A555 /* Swifty_ExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +586,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -618,6 +647,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
