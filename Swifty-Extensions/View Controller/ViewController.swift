@@ -41,9 +41,6 @@ class ViewController: UIViewController {
     private func generatePDF417Barcode() {
 //        barcodeImgView.image = "123456789".toPDF417Barcode
         barcodeImgView.image = "A-0201-ALD".toCode128Barcode
-        
-        barcodeImgView.image = BarcodeGenerator.generate(from: "A-0201-ALD", descriptor: .code128, size: CGSize(width: barcodeImgView.frame.width, height: barcodeImgView.frame.height))
-
     }
     
     private func addDisclosureBtn() {
