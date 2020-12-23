@@ -64,4 +64,20 @@ extension UIView {
         addGestureRecognizer(tap)
         isUserInteractionEnabled = true
     }
+    
+    /// Apply Gradient to UIView
+    /// The location is calculated in a range from 0 and 1. All doubles inside are considered valid.    
+    /// If locations  are nil, the locations are automatically divided in equal parts
+    
+    func applyGradient( colors: [UIColor], locations: [NSNumber]? ) {
+        assert(colors.count >= 2, "Colors must be at least 2.")
+        if locations != nil {
+            assert(colors.count == locations?.count, "Locations must have the same size of color array.")
+        }
+        let gradient = CAGradientLayer()
+        gradient.colors = colors.map { $0.cgColor }
+        gradient.locations = locations
+        gradient.frame = self.bounds
+        self.layer.insertSublayer(gradient, at: 0)
+    }
 }
