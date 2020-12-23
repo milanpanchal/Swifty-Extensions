@@ -37,15 +37,22 @@ pod "Swifty-Extensions"
 ```
 -->
 
-Drag and drop [Extensions](https://github.com/milanpanchal/Swifty-Extensions/tree/master/Swifty-Extensions/Extensions) folder inside your project and use it.
+**Swift Package Manager**
+1. Select File > Swift Packages > Add Package Dependency. Enter https://github.com/milanpanchal/Swifty-Extensions.git in the "Choose Package Repository" dialog.
+2. In the next page, specify the version resolving rule as "Up to Next Major" with "1.0.1" as its earliest version.
+3. After Xcode checking out the source and resolving the version, you can choose the "Swifty-Extensions" library and add it to your app target.
 
-Or directly you can copy and paste inside your class. 🚀
+![](/Images/Installation_SwiftPM.png "SwiftPM Installation")
 
 
+**Manually**
+
+1. Download and drop [Swifty-Extensions](https://github.com/milanpanchal/Swifty-Extensions/tree/master/Sources/Swifty-Extensions) folder inside your project.
+2. Congratulations!
 
 ## Features
 
-###### [Foundation](https://github.com/milanpanchal/Swifty-Extensions/blob/master/Swifty-Extensions/Extensions/Foundation)
+###### [Foundation](https://github.com/milanpanchal/Swifty-Extensions/tree/master/Sources/Swifty-Extensions/Foundation)
 - Array Extension
 - Bool Extension
 - Bundle Extension
@@ -60,7 +67,7 @@ Or directly you can copy and paste inside your class. 🚀
 - UserDefaults Extension
   
 
-###### [UIKit](https://github.com/milanpanchal/Swifty-Extensions/blob/master/Swifty-Extensions/Extensions/UIKit)
+###### [UIKit](https://github.com/milanpanchal/Swifty-Extensions/tree/master/Sources/Swifty-Extensions/UIKit)
 - NSLayoutConstraint Extension
 - UIAlertController Extension
 - UIApplication Extension
@@ -82,15 +89,15 @@ Or directly you can copy and paste inside your class. 🚀
 - UIViewController Extension
 - UIWindow Extension
 
-###### [CoreData](https://github.com/milanpanchal/Swifty-Extensions/blob/master/Swifty-Extensions/Extensions/CoreData)
+###### [CoreData](https://github.com/milanpanchal/Swifty-Extensions/tree/master/Sources/Swifty-Extensions/CoreData)
 
 - NSManagedObject Extension
 
-###### [Dispatch](https://github.com/milanpanchal/Swifty-Extensions/blob/master/Swifty-Extensions/Extensions/Dispatch)
+###### [Dispatch](https://github.com/milanpanchal/Swifty-Extensions/tree/master/Sources/Swifty-Extensions/Dispatch)
 
 - DispatchQueue Extension
 
-###### [MapKit](https://github.com/milanpanchal/Swifty-Extensions/blob/master/Swifty-Extensions/Extensions/MapKit)
+###### [MapKit](https://github.com/milanpanchal/Swifty-Extensions/tree/master/Sources/Swifty-Extensions/MapKit)
 
 - MKMapItem Extension
 
@@ -115,9 +122,9 @@ Or directly you can copy and paste inside your class. 🚀
 
 1. **Twitter** ([@milan_panchal24](https://twitter.com/milan_panchal24))
 2. **Github** ([/milanpanchal](https://github.com/milanpanchal/))
-3. **Medium** ([https://medium.com/@milanpanchal24](https://medium.com/@milanpanchal24))
+3. **Medium** ([https://milanpanchal24.medium.com/](https://milanpanchal24.medium.com/))
 4. **LinkedIn** ([/in/milanpanchal/](https://www.linkedin.com/in/milanpanchal/))
-2. **LeedCode** ([/milanpanchal](https://leetcode.com/milanpanchal/))
+5. **LeedCode** ([/milanpanchal](https://leetcode.com/milanpanchal/))
 
 
 License
