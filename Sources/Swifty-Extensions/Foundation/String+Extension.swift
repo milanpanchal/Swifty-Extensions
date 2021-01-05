@@ -224,7 +224,7 @@ public extension String {
     }
 }
 
-extension String {
+public extension String {
     
     /// Usage:
     /// let text = "Hello, world!"

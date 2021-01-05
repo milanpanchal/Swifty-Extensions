@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIScrollView {
+public extension UIScrollView {
    
    // Scroll to a specific view so that it's top is at the top our scrollview
    func scrollToView(view:UIView, animated: Bool) {

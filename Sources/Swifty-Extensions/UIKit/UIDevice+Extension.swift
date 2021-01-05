@@ -9,7 +9,7 @@
 import UIKit
 import AudioToolbox
 
-extension UIDevice {
+public extension UIDevice {
     
     /// Usage: UIDevice.vibrate()
     static func vibrate() {

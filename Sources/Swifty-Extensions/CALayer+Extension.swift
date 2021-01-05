@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension CALayer {
+public extension CALayer {
     
     /// Apply all 6 sketch shadow properties to the View
     func applySketchShadow(color: UIColor = .black, alpha: Float = 0.5, x: CGFloat, y: CGFloat, blur: CGFloat, spread: CGFloat = 0) {

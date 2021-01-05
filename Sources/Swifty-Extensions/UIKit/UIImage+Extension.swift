@@ -57,7 +57,7 @@ public extension UIImage {
 
 }
 
-extension UIImage {
+public extension UIImage {
     enum JPEGQuality: CGFloat {
         case lowest  = 0
         case low     = 0.25

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension String {
+public extension String {
     
     /// Generate PDF417 barcode using string
     ///

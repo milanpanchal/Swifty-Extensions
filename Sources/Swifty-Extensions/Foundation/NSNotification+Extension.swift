@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension NSNotification {
+public extension NSNotification {
     
     var keyboardSize: CGSize {
         

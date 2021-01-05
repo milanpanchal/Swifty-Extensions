@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     
     /// Get instance of the the AppDelegate
     var appDelegate: AppDelegate {
@@ -82,7 +82,7 @@ extension UIViewController {
     }
 }
 
-extension UIViewController: UIGestureRecognizerDelegate {
+public extension UIViewController: UIGestureRecognizerDelegate {
     
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         if touch.view as? UIButton != nil {

@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-extension NSManagedObject {
+public extension NSManagedObject {
 
      /// Returns the entity name for the current class.
      

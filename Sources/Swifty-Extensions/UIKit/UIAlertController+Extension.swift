@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIAlertController {
+public extension UIAlertController {
     
     class func showAlert(title: String?, message: String?, viewController: UIViewController?=nil) {
         
@@ -46,7 +46,7 @@ extension UIAlertController {
         
 }
 
-extension UIAlertController {
+public extension UIAlertController {
     /// Display message in prompt view
     ///
     /// — Parameters:

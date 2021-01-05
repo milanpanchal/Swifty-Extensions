@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UITextView {
+public extension UITextView {
     
     #if os(iOS)
     

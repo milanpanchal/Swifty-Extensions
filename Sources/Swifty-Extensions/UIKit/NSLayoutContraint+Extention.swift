@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension NSLayoutConstraint {
+public extension NSLayoutConstraint {
     
     func setMultiplier(multiplier:CGFloat) -> NSLayoutConstraint {
         

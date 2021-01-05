@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UITextField {
+public extension UITextField {
 
     func underlined() {
         let width = CGFloat(1.0)

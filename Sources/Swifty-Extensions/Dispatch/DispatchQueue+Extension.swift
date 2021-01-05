@@ -10,7 +10,7 @@ import Foundation
 
 typealias Dispatch = DispatchQueue
 
-extension Dispatch {
+public extension Dispatch {
 
     static func background(_ task: @escaping () -> Void) {
         Dispatch.global(qos: .background).async {

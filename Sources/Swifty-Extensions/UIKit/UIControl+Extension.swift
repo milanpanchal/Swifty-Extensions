@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIControl {
+public extension UIControl {
 
     private func actionHandler(action:(() -> Void)? = nil) {
         struct __ {

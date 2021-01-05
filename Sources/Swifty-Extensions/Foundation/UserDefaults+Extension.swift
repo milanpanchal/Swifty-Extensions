@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension UserDefaults {
+public extension UserDefaults {
     
     subscript<T>(key: String) -> T? {
         get {
@@ -33,7 +33,7 @@ extension UserDefaults {
     }
 }
 
-extension UserDefaults {
+public extension UserDefaults {
         
     var lastLoginEmail: String? {
         get { return UserDefaults.standard[#function] }

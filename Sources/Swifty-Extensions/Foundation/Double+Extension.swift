@@ -46,7 +46,7 @@ public extension Double {
     var isPerfectSquare: Bool {
         return self.squareRoot().rounded() == self.squareRoot()
     }
-    
+        
     /// Usage:
     /// let dPrice = 16.50
     /// let strPrice = dPrice.toPrice(currency: "€")

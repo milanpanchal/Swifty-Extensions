@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UINavigationItem {
+public extension UINavigationItem {
     
     /// Set Navigation title and subtitle
     func setTitle(_ title: String, subtitle: String) {

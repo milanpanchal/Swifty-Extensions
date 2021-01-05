@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UICollectionView {
+public extension UICollectionView {
         
     func resetScrollPositionToTop() {
         self.contentOffset = CGPoint(x: -contentInset.left, y: -contentInset.top)

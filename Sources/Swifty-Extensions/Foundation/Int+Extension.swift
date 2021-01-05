@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Int {
+public extension Int {
     
     private var double: Double { return Double(self) }
     

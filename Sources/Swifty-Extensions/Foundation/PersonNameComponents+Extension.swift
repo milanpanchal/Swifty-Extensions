@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension PersonNameComponents {
+public extension PersonNameComponents {
   var fullName: String {
     return [givenName, middleName, familyName].compactMap{ $0 }.joined(separator: " ")
   }

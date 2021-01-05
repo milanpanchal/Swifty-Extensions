@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UILabel {
+public extension UILabel {
 
     /// Pass value for any one argument - lineSpacing or lineHeightMultiple
     func setLineSpacing(lineSpacing: CGFloat = 0.0, lineHeightMultiple: CGFloat = 0.0) {
