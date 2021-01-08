@@ -10,18 +10,6 @@ import UIKit
 
 public extension UIViewController {
     
-    /// Get instance of the the AppDelegate
-    var appDelegate: AppDelegate {
-        return UIApplication.shared.delegate as! AppDelegate
-    }
-    
-    /// Get instance of the the SceneDelegate, for iOS 13+
-    var sceneDelegate: SceneDelegate? {
-        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-            let delegate = windowScene.delegate as? SceneDelegate else { return nil }
-         return delegate
-    }
-
     /// Get the instance of the window
     var window: UIWindow? {
         if #available(iOS 13, *) {
@@ -80,11 +68,21 @@ public extension UIViewController {
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = leftArrow
         self.navigationController?.navigationBar.topItem?.title = " "
     }
+    
+    // Hide the navigation bar on the this view controller
+    func hideNavigationBar(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    // Show the navigation bar on other view controllers
+    func showNavigationBar(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 }
 
-public extension UIViewController: UIGestureRecognizerDelegate {
+extension UIViewController: UIGestureRecognizerDelegate {
     
-    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         if touch.view as? UIButton != nil {
             return false
         }

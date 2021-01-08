@@ -13,7 +13,9 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
-        .target(name: "Swifty-Extensions", dependencies: []),
-        .testTarget(name: "Swifty-ExtensionsTests", dependencies: ["Swifty-Extensions"])
+        .target(name: "Swifty-Extensions", dependencies: [], path: "Sources")
+    ],
+    swiftLanguageVersions: [
+        .version("5")
     ]
 )

@@ -80,4 +80,16 @@ public extension UIView {
         gradient.frame = self.bounds
         self.layer.insertSublayer(gradient, at: 0)
     }
+    
+    func shake() {
+        let shake = CABasicAnimation(keyPath: "position")
+        shake.duration = 0.1
+        shake.repeatCount = 2
+        shake.autoreverses = true
+        
+        shake.fromValue = NSValue(cgPoint: CGPoint(x: center.x - 8, y: center.y))
+        shake.toValue   = NSValue(cgPoint: CGPoint(x: center.x + 8, y: center.y))
+
+        layer.add(shake, forKey: "position")
+    }
 }
