@@ -1,6 +1,6 @@
 //
 //  UIViewController+Extension.swift
-//  Swift-Extension
+//  Swifty-Extension
 //
 //  Created by MilanPanchal on 05/06/16.
 //  Copyright © 2016 JeenalInfotech. All rights reserved.
@@ -9,6 +9,16 @@
 import UIKit
 
 public extension UIViewController {
+    
+    /*var appDelegate: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
+    var sceneDelegate: SceneDelegate? {
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+            let delegate = windowScene.delegate as? SceneDelegate else { return nil }
+         return delegate
+    }*/
     
     /// Get the instance of the window
     var window: UIWindow? {

@@ -42,7 +42,16 @@ public extension UIView {
         if let cornerRadius = cornerRadius {
             self.layer.cornerRadius = cornerRadius
         }
+    }
 
+    /// Remove shadow from the view
+    func removeShadow() {
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius  = 0
+        self.layer.shadowColor   = UIColor.clear.cgColor
+        self.layer.shadowOpacity = 0.0
+        self.layer.shadowOffset  = CGSize(width: 0, height: 0)
+        self.layer.shadowRadius  = 0.0
     }
     
     var parentViewController: UIViewController? {

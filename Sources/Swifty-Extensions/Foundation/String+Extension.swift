@@ -1,6 +1,6 @@
 //
 //  String+Extension.swift
-//  Swift-Extension
+//  Swifty-Extension
 //
 //  Created by MilanPanchal on 05/06/16.
 //  Copyright © 2016 JeenalInfotech. All rights reserved.
@@ -152,7 +152,12 @@ public extension String {
         return String(self.reversed())
     }
     
-    func randomString(length: Int) -> String {
+    /// Generate a random alphanumeric string of 'x' length. Default lenght is 20
+    func randomString(length: Int = 20) -> String {
+        guard length > 0 else {
+            return ""
+        }
+        
         let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !.?"
         return String((0..<length).map{ _ in letters.randomElement()! })
     }
@@ -221,6 +226,24 @@ public extension String {
             return CLLocationCoordinate2D(latitude: dLat, longitude: dLng)
         }
         return nil
+    }
+    
+    ///UIKit’s labels do a great job of truncating strings to a specific length, but for other purposes – such as writing out to a file, rendering to an image, or showing messages – we need to roll something ourselves.
+    ///
+    ///     let testString = "He thrusts his fists against the posts and still insists he sees the ghosts."
+    ///     print(testString.truncate(to: 20, addEllipsis: true))
+
+    func truncate(to length: Int, addEllipsis: Bool = false) -> String  {
+        if length > count { return self }
+
+        let endPosition = self.index(self.startIndex, offsetBy: length)
+        let trimmed = self[..<endPosition]
+
+        if addEllipsis {
+            return "\(trimmed)..."
+        } else {
+            return String(trimmed)
+        }
     }
 }
 

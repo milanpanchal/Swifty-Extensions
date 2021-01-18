@@ -1,6 +1,6 @@
 //
 //  UIApplication+Extension.swift
-//  Swift-Extension
+//  Swifty-Extension
 //
 //  Created by MilanPanchal on 05/06/16.
 //  Copyright © 2016 JeenalInfotech. All rights reserved.
@@ -36,6 +36,8 @@ public extension UIApplication {
         return try! FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
     }
 
+    /// Clear launch screen cache
+    /// Make sure to call only in debug mode
     func clearLaunchScreenCache() {
         do {
             try FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Library/SplashBoard")

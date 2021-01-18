@@ -1,6 +1,6 @@
 //
 //  Dictionary+Extension.swift
-//  Swift-Extension
+//  Swifty-Extension
 //
 //  Created by MilanPanchal on 05/06/16.
 //  Copyright © 2016 JeenalInfotech. All rights reserved.

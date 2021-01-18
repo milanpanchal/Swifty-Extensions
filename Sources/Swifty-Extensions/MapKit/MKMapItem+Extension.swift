@@ -10,9 +10,9 @@ import MapKit
 
 public extension MKMapItem {
     
-  convenience init(coordinate: CLLocationCoordinate2D, name: String) {
-    self.init(placemark: .init(coordinate: coordinate))
-    self.name = name
-  }
+    convenience init(coordinate: CLLocationCoordinate2D, name: String) {
+        self.init(placemark: .init(coordinate: coordinate))
+        self.name = name
+    }
     
 }

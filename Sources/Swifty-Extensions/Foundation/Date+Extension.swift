@@ -101,6 +101,63 @@ public extension Date {
     static var currentTimeStamp: Int64 {
         return Int64(Date().timeIntervalSince1970 * 1000)
     }
+    
+    // Usage: Date.randomDate(range: 500) // Any date that is +/- 500 days from the current date
+    static func randomDate(range: Int) -> Date {
+        // Get the interval for the current date
+        let interval =  Date().timeIntervalSince1970
+        
+        // There are 86,400 milliseconds in a day (ignoring leap dates)
+        // Multiply the 86,400 milliseconds against the valid range of days
+        let intervalRange = Double(86_400 * range)
+        
+        // Select a random point within the interval range
+        let random = Double(arc4random_uniform(UInt32(intervalRange)) + 1)
+        
+        // Since this can either be in the past or future, we shift the range
+        // so that the halfway point is the present
+        let newInterval = interval + (random - (intervalRange / 2.0))
+        
+        // Initialize a date value with our newly created interval
+        return Date(timeIntervalSince1970: newInterval)
+    }
+    
+     func startOfMonth() -> Date {
+         var components = Calendar.current.dateComponents([.year,.month], from: self)
+         components.day = 1
+         let firstDateOfMonth: Date = Calendar.current.date(from: components)!
+         return firstDateOfMonth
+     }
+     
+     func endOfMonth() -> Date {
+         return Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: self.startOfMonth())!
+     }
+     
+     func nextDate() -> Date {
+         let nextDate = Calendar.current.date(byAdding: .day, value: 1, to: self)
+         return nextDate ?? Date()
+     }
+     
+     func previousDate() -> Date {
+         let previousDate = Calendar.current.date(byAdding: .day, value: -1, to: self)
+         return previousDate ?? Date()
+     }
+     
+     func addMonths(numberOfMonths: Int) -> Date {
+         let endDate = Calendar.current.date(byAdding: .month, value: numberOfMonths, to: self)
+         return endDate ?? Date()
+     }
+     
+     func removeMonths(numberOfMonths: Int) -> Date {
+         let endDate = Calendar.current.date(byAdding: .month, value: -numberOfMonths, to: self)
+         return endDate ?? Date()
+     }
+     
+     func removeYears(numberOfYears: Int) -> Date {
+         let endDate = Calendar.current.date(byAdding: .year, value: -numberOfYears, to: self)
+         return endDate ?? Date()
+     }
+
 }
 
 /// Returns if dates are equal to each other
