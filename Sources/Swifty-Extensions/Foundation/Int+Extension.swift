@@ -17,7 +17,7 @@ public extension Int {
     }
     
     var minutesToHoursMinutes: String {
-        if self == 0 {return "0 min"}
+        if self == 0 { return "0 mins" }
         
         let hours = self / 60
         let minutes = self % 60

@@ -71,22 +71,39 @@ public extension UIViewController {
         self.present(navigationController, animated: false, completion: nil)
     }
 
-    // Custom Back button
-    func setBackButton() {
-        let leftArrow = UIImage(named: "leftArrow")
-        navigationController?.navigationBar.backIndicatorImage = leftArrow
-        navigationController?.navigationBar.backIndicatorTransitionMaskImage = leftArrow
+    /// Custom Back button
+    func setBackButton(backButtonImg: UIImage) {
+        navigationController?.navigationBar.backIndicatorImage = backButtonImg
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButtonImg
         self.navigationController?.navigationBar.topItem?.title = " "
     }
     
-    // Hide the navigation bar on the this view controller
+    /// Hide the navigation bar on the this view controller
     func hideNavigationBar(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
-    // Show the navigation bar on other view controllers
+    /// Show the navigation bar on other view controllers
     func showNavigationBar(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    /// Remove all child view controller from current view controller
+    func removeAllChildViewController() {
+        self.children.forEach {
+            $0.willMove(toParent: nil)
+            $0.view.removeFromSuperview()
+            $0.removeFromParent()
+        }
+    }
+
+    /// Remove top child view controller from current view controller
+    func removeTopChildViewController() {
+        if let topChildVC = self.children.last {
+            topChildVC.willMove(toParent: nil)
+            topChildVC.view.removeFromSuperview()
+            topChildVC.removeFromParent()
+        }
     }
 }
 
