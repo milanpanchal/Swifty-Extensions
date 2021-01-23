@@ -88,6 +88,18 @@ public extension UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
+    /// Add child view controller to the current view controller
+    func addChildViewController(_ child: UIViewController, frame: CGRect? = nil) {
+        addChild(child)
+
+        if let frame = frame {
+            child.view.frame = frame
+        }
+
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+    }
+
     /// Remove all child view controller from current view controller
     func removeAllChildViewController() {
         self.children.forEach {
